@@ -3,20 +3,48 @@ package com.example.alpha;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class StudentDetailsActivity extends AppCompatActivity {
+    DBhelper dBhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_details);
-        Button backbtn = (Button) findViewById(R.id.backbtn);
+        dBhelper = new DBhelper(this);
+        Bundle extras = getIntent().getExtras();
+        {
+            int Value = extras.getInt("id");
+
+            if (Value > 0) {
+                //means this is the view part not the add contact part.
+                Cursor rs = dBhelper.getAllStudents(Value);
+                id_To_Update = Value;
+                rs.moveToFirst();
+
+                String stuname = rs.getString(rs.getColumnIndex(DBHelper.CONTACTS_COLUMN_STUNAME));
+                String stuphone = rs.getString(rs.getColumnIndex(DBHelper.CONTACTS_COLUMN_STUPHONE));
+                String stuemail = rs.getString(rs.getColumnIndex(DBHelper.CONTACTS_COLUMN_STUEMAIL));
+                String stustreet = rs.getString(rs.getColumnIndex(DBHelper.CONTACTS_COLUMN_STUSTREET));
+                String stuplace = rs.getString(rs.getColumnIndex(DBHelper.CONTACTS_COLUMN_STUCITY));
+
+                if (!rs.isClosed()) {
+                    rs.close();
+                }
+
+                Button backbtn = (Button) findViewById(R.id.backbtn);
         TextView logout = (TextView) findViewById(R.id.logout);
         TextView copyright = (TextView) findViewById(R.id.copyright);
         copyright.setTextColor(Color.BLUE);
