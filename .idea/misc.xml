@@ -7,6 +7,10 @@
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_student_details.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_student_registration.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/delete_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/insert_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/update_dialog.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/update_id_dialog.xml" value="0.1" />
       </map>
     </option>
   </component>

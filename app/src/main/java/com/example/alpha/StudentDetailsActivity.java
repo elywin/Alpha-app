@@ -20,30 +20,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class StudentDetailsActivity extends AppCompatActivity {
-    ContentValues val=new ContentValues();
-    ListView list;
-    String arruser[],arrpass[];
-    SQLiteDatabase dBhelper;
-    @SuppressLint("WrongConstant")
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_details);
-        list = (ListView)findViewById(R.id.listView1);
-        dBhelper = openOrCreateDatabase("student.db", SQLiteDatabase.CREATE_IF_NECESSARY,null);
-        Cursor c = dBhelper.query("student",null,null,null,null,null,null);
-        arruser=new String[c.getCount()];
-        arrpass=new String[c.getCount()];
-        c.moveToFirst();
-        for(int i=0;i<arruser.length;i++){
-            arruser[i]=c.getString(0);
-            arrpass[i]=c.getString(1);
 
-        }
-
-        ArrayAdapter<String>app =new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
-        list.setAdapter(app);
 
     }
 

@@ -13,14 +13,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
-    DBhelper dBhelper;
+    DatabaseHelper dBhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        dBhelper = new DBhelper(this);
+        dBhelper = new DatabaseHelper(this);
 
         TextView lgbtn = (TextView) findViewById(R.id.lgbtn);
         Button regbtn = (Button) findViewById(R.id.regbtn);

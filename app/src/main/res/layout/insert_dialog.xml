@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:text="INSERT DATA"
+        android:textColor="#fff"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_margin="5dp"
+        android:id="@+id/fname"
+        android:hint="first Name : "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_margin="5dp"
+        android:id="@+id/lname"
+        android:hint="last name : "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_margin="5dp"
+        android:id="@+id/prog"
+        android:hint="Program of study : "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_margin="5dp"
+        android:id="@+id/year"
+        android:hint="year of study : "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_margin="5dp"
+        android:id="@+id/cu"
+        android:hint="course unit : "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:layout_margin="5dp"
+        android:id="@+id/resdidence"
+        android:hint="Residence : "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:text="INSERT"
+        android:id="@+id/insert_btn"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
